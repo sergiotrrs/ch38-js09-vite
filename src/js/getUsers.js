@@ -1,4 +1,15 @@
+import axios from "axios";
 
+const getUsersUsingAxios = async( url ) =>{
+    try {
+        const response = await axios.get(url);
+        console.log(response);
+        const users = response.data.data;
+        return users; // Axios realiza una conversión implícita de json a Object
+    } catch (error) {
+        
+    }
+}
 
 
 const getUsersUsignFetch = async( url ) => {
@@ -15,4 +26,4 @@ const getUsersUsignFetch = async( url ) => {
 
 }
 
-export {getUsersUsignFetch};
+export {getUsersUsignFetch, getUsersUsingAxios};
