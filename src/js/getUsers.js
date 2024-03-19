@@ -7,7 +7,7 @@ const getUsersUsingAxios = async( url ) =>{
         const users = response.data.data;
         return users; // Axios realiza una conversión implícita de json a Object
     } catch (error) {
-        
+        console.log(error);
     }
 }
 

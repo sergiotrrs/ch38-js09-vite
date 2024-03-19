@@ -16,7 +16,6 @@ test("El array de Users no está vacío", async()=>{
 // Probar api Axios
 test("El array de Users no está vacío usando Axios", async()=>{
      const users = await getUsersUsingAxios( url );
-    //const users = await getUsersUsingAxios( "/" );
     // Verificar que users sea un array
     expect( Array.isArray( users)  ).toBe( true );
     expect( Array.isArray( users)  ).toBeTruthy();
